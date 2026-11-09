@@ -89,7 +89,7 @@ def make_gauge(
                 )
             )
 
-    marks = [-100, -50, 0, 50, 100] if low < 0 else [0, 20, 40, 60, 80, 100]
+    marks = [-50, -25, 0, 25, 50] if low < 0 else [0, 20, 40, 60, 80, 100]
     for tick in marks:
         theta = math.pi * (1 - (tick - low) / (high - low))
         cx, sy = math.cos(theta), math.sin(theta)
@@ -253,8 +253,8 @@ else:
             col2,
             "Predicted change in train delay if overridden",
             prediction.delay_seconds,
-            -100,
-            100,
+            -50,
+            50,
             None,
             True,
             " seconds per train section",
