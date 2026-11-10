@@ -240,7 +240,7 @@ else:
     metrics = [
         (
             col1,
-            "Directional stability：Share of trees predicting override harms train punctuality",
+            "Directional stability：Share of retained trees predicting override harms train punctuality",
             prediction.harm_probability * 100,
             0,
             100,
@@ -262,7 +262,7 @@ else:
         ),
         (
             col3,
-            "Directional stability：Share of trees predicting override improves train punctuality",
+            "Directional stability：Share of retained trees predicting override improves train punctuality",
             prediction.improvement_probability * 100,
             0,
             100,
@@ -287,7 +287,7 @@ else:
 
     st.markdown(
         '<div class="tree-summary">'
-        'Percentage of retained decision trees used to generate '
+        'Percentage of decision trees used to generate '
         'decision-support recommendations: '
         f'{prediction.retained_trees_ratio * 100:.2f}%</div>',
         unsafe_allow_html=True,
