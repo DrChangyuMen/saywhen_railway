@@ -17,7 +17,7 @@ FEATURE_COLS = tuple(f"feature_{i}" for i in range(1, 16))
 # These are CUMULATIVE encodings, e.g. density category 2 => (0, 1, 1),
 # NOT mutually exclusive / one-hot encodings.
 ENCODINGS: dict[str, tuple[tuple[str, ...], tuple[tuple[int, ...], ...]]] = {
-    "number_incident": (
+    "number_new_incident": (
         ("feature_1",),
         ((1,), (0,)),
     ),
@@ -49,8 +49,8 @@ ENCODINGS: dict[str, tuple[tuple[str, ...], tuple[tuple[int, ...], ...]]] = {
 }
 
 CATEGORY_LABELS = (
-    ("number_incident", "Select incident count category",
-     ("number_incident = 0", "number_incident > 0")),
+    ("number_new_incident", "Select incident count category",
+     ("number_new_incident = 0", "number_new_incident > 0")),
     ("length_incident", "Select incident length category",
      ("length_incident = 0", "0 < length_incident ≤ 3", "length_incident > 3")),
     ("density", "Select traffic density category",
